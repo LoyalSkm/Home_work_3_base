@@ -74,14 +74,11 @@ def vote():
         ''')
 
     v1 = int(input("Ваш выбор: "))
-    v2 = 0
     if v1 == 1:
-         v2 = disc()
+        return disc()
     elif v1 == 2:
-        v2 = link_found()
+        return link_found()
     elif v1 == 3:
-        v2 = correct_name()
-    return(v2)
+        return correct_name()
 
 vote()
-# link_found()
