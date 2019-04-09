@@ -1,5 +1,5 @@
 from math import sqrt
-import string
+import string, sys
 
 def disc():
     def prov(mes):
@@ -12,8 +12,6 @@ def disc():
     a = prov("Введите значения a: ")
     b = prov("Введите значения b: ")
     c = prov("Введите значения с: ")
-    if a == 0:
-        print("значение (a) не можеь быть равным 0")
 
     D = (b ** 2) - 4 * a * c
     print("Дискриминант: D = " + str(D))
@@ -22,6 +20,8 @@ def disc():
         x1 = (-b + sqrt(D)) / (2 * a)
         x2 = (-b - sqrt(D)) / (2 * a)
         print("x1 = " + str(x1) + " x2 = " + str(x2))
+    except ZeroDivisionError:
+        print("По скольку деление на 0 - корней Нет!")
     except:
         print("Нет решения, дискриминант отрицательный")
 
